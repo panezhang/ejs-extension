@@ -1,2 +1,22 @@
-# IDE
+# Intellij
 .idea
+*.iml
+
+# OS X
+.DS_Store*
+._*
+Icon?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+# npm
+node_modules
+*.log
+*.gz
