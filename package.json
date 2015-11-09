@@ -1,0 +1,22 @@
+{
+  "name": "ejs-extension-plus",
+  "version": "0.0.1",
+  "description": "Add layout and widget functionalities to ejs template engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panezhang/ejs-extension.git"
+  },
+  "keywords": [
+    "ejs"
+  ],
+  "author": "panezhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panezhang/ejs-extension/issues"
+  },
+  "homepage": "https://github.com/panezhang/ejs-extension"
+}
