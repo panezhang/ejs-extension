@@ -10,13 +10,13 @@
 // system modules
 var path = require('path');
 
-module.exports = function (webRootPath, templateFolder, staticFolder, map, Conf, constantObj, LoggerCreate) {
+module.exports = function (webRootPath, templateFolder, staticFolder, map, Conf, constantObj, functionExt, LoggerCreate) {
     var logger = LoggerCreate('template-extension');
 
     var Resource = require(path.join(__dirname, 'lib', 'Resource'))(webRootPath, templateFolder, staticFolder, map, Conf, LoggerCreate);
     var Page = Resource.Page;
     var ConstantsHelper = require(path.join(__dirname, 'lib', 'Constants'))(constantObj, LoggerCreate);
-    var FunctionsHelper = require(path.join(__dirname, 'lib', 'Functions'))(LoggerCreate);
+    var FunctionsHelper = require(path.join(__dirname, 'lib', 'Functions'))(functionExt, LoggerCreate);
     var UserAgentHelper = require(path.join(__dirname, 'lib', 'UserAgentHelper'))(LoggerCreate);
     var PageCache = require(path.join(__dirname, 'lib', 'PageCache'))(LoggerCreate);
 
