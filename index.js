@@ -81,9 +81,10 @@ module.exports = function (options) {
     return function (req, res, next) {
         if (res.renderPage) throw new Error('res.renderPage already exists!');
 
+        // renderPage之外也对外暴露的middlerware
+        // cache和ua相关, 必须先设置ua
+        UserAgentHelper(req, res);
         res.renderPage = function (view, options, callback) {
-            // cache和ua相关, 必须先设置ua
-            UserAgentHelper(req, res);
 
             var uaIdentity = res.locals.AgentHelper.uaIdentity;
             // 先查cache
