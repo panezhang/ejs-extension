@@ -61,6 +61,9 @@ module.exports = function (options) {
         consts: {},
         funcs: {},
 
+        maxCacheCopyNum: 20,                // 最大的cache拷贝份数
+        maxCacheExpireTime: 10 * 60 * 1e3,  // cache过期时间
+
         LoggerCreate: require(path.join(__dirname, 'lib', 'tool', 'Logger'))
     };
 
@@ -71,7 +74,7 @@ module.exports = function (options) {
     var FunctionsHelper = require(path.join(__dirname, 'lib', 'helper', 'Functions'))(opts.funcs, opts.LoggerCreate);
     var UserAgentHelper = require(path.join(__dirname, 'lib', 'helper', 'UserAgentHelper'))(opts.LoggerCreate);
 
-    var PageCacheHelper = require(path.join(__dirname, 'lib', 'tool', 'PageCache'))(opts.LoggerCreate);
+    var PageCacheHelper = require(path.join(__dirname, 'lib', 'tool', 'PageCache'))(opts);
     var Resource = require(path.join(__dirname, 'lib', 'resource', 'Resource'))(opts);
     var Page = Resource.Page;
 
