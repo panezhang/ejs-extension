@@ -63,6 +63,8 @@ module.exports = function (options) {
 
         maxCacheCopyNum: 20,                // 最大的cache拷贝份数
         maxCacheExpireTime: 10 * 60 * 1e3,  // cache过期时间
+        maxDeltaHitIgnore: 0,               // hit差值小于该值的cache不按热度排序, 按时间排序
+        maxHitIgnore: 10,                   // hit小于该值的cache按时间排序
 
         LoggerCreate: require(path.join(__dirname, 'lib', 'tool', 'Logger'))
     };

@@ -1,6 +1,6 @@
 {
   "name": "ejs-extension-plus",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Add layout and widget functionalities to ejs template engine.",
   "main": "index.js",
   "scripts": {
